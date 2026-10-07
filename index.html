@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday! 🎂</title>
+  <!-- นำเข้าฟอนต์น่ารักๆ จาก Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- นำเข้าไลบรารีเอฟเฟกต์พลุ -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Mali', cursive, sans-serif;
+      background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      color: #4a4a4a;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 24px;
+      padding: 30px 25px;
+      max-width: 450px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      animation: popIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    @keyframes popIn {
+      0% { transform: scale(0.5); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .img-container {
+      width: 180px;
+      height: 180px;
+      margin: 0 auto 20px auto;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 5px solid #ffb6c1;
+      box-shadow: 0 6px 15px rgba(255, 182, 193, 0.4);
+    }
+
+    .img-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    h1 {
+      color: #ff5e7e;
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+    }
+
+    p.wish {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: #555;
+      margin-bottom: 25px;
+      word-wrap: break-word;
+    }
+
+    .btn {
+      background: linear-gradient(45deg, #ff758c, #ff7eb3);
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      font-size: 1.1rem;
+      font-family: 'Mali', cursive;
+      font-weight: 600;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(255, 117, 140, 0.4);
+      transition: all 0.2s ease-in-out;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255, 117, 140, 0.6);
+    }
+
+    .btn:active {
+      transform: translateY(1px);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <!-- ส่วนรูปภาพ (เปลี่ยน URL รูปตรง src) -->
+    <div class="img-container">
+      <img src="
+
+" alt="Birthday Image">
+    </div>
+
+    <!-- หัวข้อคำอวยพร -->
+    <h1>Happy Birthday! 🎂🎉</h1>
+
+    <!-- อวยพร🫶 -->
+    <p class="wish">
+      สุขสันต์วันเกิดน้าา ขอให้หนูมีความสุขม๊ากกก สุขภาพแข็งแรง <br>
+      สมหวังในทุกๆเรื่อง ยิ้มเย้ออๆ มีพี่คอยซับพอตอยู่ตรงนี้น้าไอเด้กก <br>
+      เหนื่อยก้พักบ้างง แล้ววก้อย่าลืมกินข้าวเช้าา ✨💖
+    </p>
+
+    <!-- จุดพลุ👈 -->
+    <button class="btn" onclick="fireConfetti()">🎉 กดเพื่อฉลอง!</button>
+  </div>
+
+  <script>
+    // ฟังก์ชันจุดพลุเมื่อโหลดหน้าเว็บครั้งแรก
+    window.onload = function() {
+      fireConfetti();
+    };
+
+    // ฟังก์ชันจุดพลุฉลอง
+    function fireConfetti() {
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 }
+      });
+    }
+  </script>
+
+</body>
+</html>
